@@ -29,7 +29,11 @@
 
     
   
-<meta name="generator" content="Hexo 6.3.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
 
 
 <body>
@@ -172,6 +176,10 @@ marked:
 </li>
 </ul>
 <p>配置这个文件的作用就是在首页的菜单栏目增加我们刚才生成的slide页面，在<code>source/slide/index.md</code>中，我们可以创建链接指向<code>lib</code>目录下的自定义html文件</p>
+<h2 id="Hexo中支持latex数学公式"><a href="#Hexo中支持latex数学公式" class="headerlink" title="Hexo中支持latex数学公式"></a>Hexo中支持latex数学公式</h2><p>在<code>blog</code>目录下的<code>_config.yml</code>中配置如下：</p>
+<blockquote>
+<p># MathJax Support<br>mathjax:<br> enable: true<br> per_page: false<br> cdn:<br>在需要使用Latex的文章中，开头配置<code>mathjax: true</code>即可。</p>
+</blockquote>
 
         <!-- 分类文章 -->
         
