@@ -148,6 +148,18 @@ marked:
 <h2 id="内网穿透，告别github"><a href="#内网穿透，告别github" class="headerlink" title="内网穿透，告别github"></a>内网穿透，告别github</h2><p>如果我们本地有内网穿透的话，只要内网穿透的类型为HTTPS，且端口号为<code>&lt;port-number&gt;</code>,那么我们就可以使用<code>hexo s -p &lt;port-number&gt;</code>,这样我们使用内网穿透的域名就能访问我们的博客系统了！</p>
 <p>虽然我们告别了github，但是我们又陷入了内网穿透限制带宽的深渊了，如何选择就要看读者的口袋了。</p>
 <h2 id="posts目录的整理"><a href="#posts目录的整理" class="headerlink" title="_posts目录的整理"></a>_posts目录的整理</h2><p>如果未来我们的博客系统变得庞大起来，博文的管理肯定会成为一个难题，所以我们应该对<code>_posts</code>目录下的文件进行管理。官方文档中并没有给出相应的办法，但是经过试验，我们可以直接在<code>_posts</code>目录下新建文件夹，将相同category的文件放在同一个文件夹内，同时注意将同名资源文件夹也要放进来。新建的文件没有办法自动在我们定义的文件夹中生成，但我们可以手动移动，对系统没有影响。</p>
+<h2 id="Hexo中自定义HTML"><a href="#Hexo中自定义HTML" class="headerlink" title="Hexo中自定义HTML"></a>Hexo中自定义HTML</h2><p>我的目的是能够在我的访问我的站点时，能够打开一张我自己定义的html页面。</p>
+<p>我使用的主题是<code>white</code>,其他主题的配置方法和我的可能有所区别</p>
+<ul>
+<li>首先使用<code>hexo new page slide</code>命令创建一个新的页面，之后我将会把这个页面放在主页的菜单栏中</li>
+<li>在<code>source</code>目录中找到<code>slide</code>目录，并在其中新建一个<code>lib</code>目录，接下来我们自定义的html文件都将放在这个目录下</li>
+<li>在<code>_config.yml</code>中,配置为<code>skip_render: &quot;slide/lib/*&quot;</code>。因为这个配置选项只在<code>source</code>目录下起作用，所以我们不要配置成：<code>skip_render: &quot;/source/slide/lib/**&quot;</code>,这样就会发生错误。这个配置是为了不让hexo渲染<code>/slide/lib</code>目录下的html文件，所以hexo中的格式不会对<code>lib</code>目录下的文件有影响。</li>
+<li>最后在<code>white</code>主题的配置文件<code>_config.yml</code>下，在<code>menu</code>条目下增加这么一条<code>SLIDE: /slide</code>，总得看是这样：<blockquote>
+<p>menu:<br>Home: &#x2F;<br>BLOG: &#x2F;archives<br>SLIDE: &#x2F;slide</p>
+</blockquote>
+</li>
+</ul>
+<p>配置这个文件的作用就是在首页的菜单栏目增加我们刚才生成的slide页面，在<code>source/slide/index.md</code>中，我们可以创建链接指向<code>lib</code>目录下的自定义html文件</p>
 
         <!-- 分类文章 -->
         
