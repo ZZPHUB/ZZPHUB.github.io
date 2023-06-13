@@ -32,7 +32,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: #333333;
+  color: #black;
 }
 body,
 p,
@@ -74,16 +74,16 @@ span {
   float: left;
   margin-right: 30px;
   font-size: 0.9em;
-  color: #898FA0;
+  color: #black;
   position: relative;
   transition: all 0.3s;
 }
 .menu-li:hover {
-  color: #333333;
+  color: #black;
 }
 .active-link li {
   position: relative;
-  color: #333333;
+  color: #black;
 }
 .active-link li:after {
   content: "";
@@ -121,10 +121,10 @@ span {
   line-height: 2.8;
 }
 #sort .categories-outer ul li a {
-  color: #898FA0;
+  color: #black;
 }
 #sort .categories-outer ul li a:hover {
-  color: #333333;
+  color: #black;
 }
 .body-outer {
   height: 100%;
@@ -263,11 +263,11 @@ a {
   justify-content: space-between;
 }
 .footer-text {
-  color: #898FA0;
+  color: #black;
   font-size: 1em;
 }
 .footer-text a {
-  color: #898FA0;
+  color: #black;
   font-size: 1em;
   transition: all 0.3s;
 }
@@ -286,7 +286,7 @@ a {
   transition: all 0.3s;
 }
 .footer-li i {
-  color: #898FA0;
+  color: #black;
   font-size: 1.2em;
   transition: all 0.3s;
   padding: 5px;
@@ -327,7 +327,7 @@ a {
   margin-bottom: 45px;
   margin-top: -9px;
   line-height: 3;
-  color: #898FA0;
+  color: #black;
   position: relative;
 }
 .img-show-post-date:after {
@@ -400,7 +400,7 @@ a {
   letter-spacing: 1.5px;
   text-align: center;
   font-family: Gothic;
-  color: #898FA0;
+  color: #black;
   line-height: 4;
   position: relative;
 }
@@ -431,7 +431,7 @@ a {
 .post-content-inner h5,
 .post-content-inner h6 {
   margin: 15px 0px;
-  color: #333333;
+  color: #black;
   font-weight: normal;
   font-family: Gothic;
 }
@@ -464,7 +464,7 @@ a {
 .post-content-inner blockquote {
   border-left: 4.2px solid #e3e3e3;
   padding-left: 17px;
-  color: #898FA0;
+  color: #black;
   font-size: 0.9em;
 }
 .post-content-inner blockquote > p {
@@ -517,7 +517,7 @@ ol {
 .post-content-inner ol li::before {
   content: counter(li);
   font-family: Merriweather;
-  color: #333333;
+  color: #black;
   margin-right: 0.7em;
   text-align: right;
 }
@@ -532,7 +532,7 @@ ol {
   content: "◆";
   font-size: 0.8em;
   font-family: Merriweather;
-  color: #898FA0;
+  color: #black;
   margin-right: 0.7em;
   text-align: right;
 }
@@ -598,7 +598,7 @@ code {
   font-size: 0.8em;
   font-weight: 1000;
   background-color: #f8f8f8;
-  color: #333333;
+  color: #black;
   padding: 4px 6px;
   margin: 0px 4px;
   font-family: hack-regular, hack-italic, hack-bold, hack-bolditalic;
@@ -617,14 +617,14 @@ code {
   counter-increment: li;
 }
 .toc-top li a {
-  color: #898FA0;
+  color: #black;
   font-size: 0.8em;
 }
 .toc-top li::before {
   content: counter(li);
   font-size: 0.8em;
   font-family: Merriweather;
-  color: #898FA0;
+  color: #black;
   margin-right: 0.5em;
   text-align: right;
   transition: all 0.3s;
@@ -713,7 +713,7 @@ li p {
   padding-left: 10px;
 }
 .post-content-inner .post-content-inner-space .space-toc-main a {
-  color: #898FA0;
+  color: #black;
   transition: all 0.3s;
   font-size: 0.8em;
 }
@@ -730,7 +730,7 @@ li p {
   content: counter(li);
   font-size: 0.8em;
   font-family: Merriweather;
-  color: #898FA0;
+  color: #black;
   margin-right: 0.5em;
   text-align: right;
   transition: all 0.3s;
@@ -819,7 +819,7 @@ li p {
   color: #fff;
 }
 #local-search-result {
-  border-top: 1px dashed #898FA0;
+  border-top: 1px dashed #black;
   margin-top: 40px;
   padding-top: 30px;
 }
