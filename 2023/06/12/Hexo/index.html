@@ -1,0 +1,273 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>  Hexo快速入门 |    ZZP</title>
+  <meta name="description" content="My Blog Records What I Learn.">
+  <!-- 标签页图标 -->
+  
+
+  <!-- 图标库 -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- 动画库 -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/css/animate.css"/>
+  
+  <!-- css文件 -->
+  
+<link rel="stylesheet" href="/css/white.css">
+
+  <!-- 代码高亮 -->
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.1/styles/github.css">
+
+    
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+
+<div class="menu-outer">
+    <div class="menu-inner">
+      <div class="menu-site-name  animate__animated  animate__fadeInUp">
+        <a href="/">
+          ZZP
+        </a>
+        
+      </div>
+      <div class="menu-group">
+        <ul class="menu-ul">
+        
+          <a href="/" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              HOME
+            </li>
+          </a>
+        
+          <a href="/archives" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              BLOG
+            </li>
+          </a>
+        
+        
+          <li class="menu-li animate__animated  animate__fadeInUp" id="sort">
+             CATEGORIES
+             <div class="categories-outer " id="sort-div">
+               <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Math/">Math</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Riscv/">Riscv</a></li></ul>
+             </div>
+          </li>
+        
+        
+          <li class="menu-li animate__animated  animate__fadeInUp" id="mobile-menu">
+            <i class="ri-menu-line"></i>
+          </li>
+        
+        </ul>
+
+      </div>
+
+    </div>
+</div>
+<div id="mobile-main" class="animate__animated  animate__fadeIn">
+  <div class="mobile-menu-inner">
+    <div class="mobile-menu-site-name animate__animated  animate__fadeInUp">
+      <a href="/">
+        ZZP
+      </a>
+    </div>
+    <div class="mobile-menu-group" id="mobile-close">
+      <i class="ri-close-line"></i>
+    </div>
+
+  </div>
+
+  <div class="mobile-menu-div">
+  
+    <a href="/" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>HOME</span>
+      </div>
+    </a>
+  
+    <a href="/archives" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>BLOG</span>
+      </div>
+    </a>
+  
+  
+  </div>
+
+
+</div>
+
+<div class="body-outer">
+  <div class="body-inner">
+    
+<article class="post-inner">
+  <div class="post-content-outer">
+    <div class="post-intro">
+      <div class="post-title animate__animated  animate__fadeInUp">Hexo快速入门</div>
+      <div class="meta-intro animate__animated  animate__fadeInUp">6月 12 2023</div>
+      
+    </div>
+    <div class="post-content-inner">
+      <div class="post-content-inner-space">
+
+      </div>
+      <div class="post-content-main animate__animated  animate__fadeInUp">
+        <!-- top型目录 -->
+        
+        <h1 id="Hexo快速入门"><a href="#Hexo快速入门" class="headerlink" title="Hexo快速入门"></a>Hexo<del>快速</del>入门</h1><h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>本文介绍了通过hexo + github page搭建静态博客过程中的步骤和遇到的问题。<em><strong>请注意：</strong></em> 我部署到github page上的只有静态html文件，没有源码！至于什么是静态html文件和源码见<a href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84">目录结构</a>。我参考的内容是官方文档中的<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/one-command-deployment">一键部署</a></p>
+<h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><ul>
+<li>git</li>
+<li>node.js</li>
+</ul>
+<p>因为我的电脑之前已经配置过了，所以我在依赖方面没有遇到障碍。关于依赖的安装和版本要求见<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">官网文档</a>.</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>官方文档给出的安装步骤如下：</p>
+<pre><code>npm install hexo-cli -g
+hexo init blog
+cd blog
+npm install
+hexo server
+</code></pre>
+<p>其实还是非常简单的。但是还是要具体讲一下细节和我遇到的问题：</p>
+<ul>
+<li><code>npm install hexo-cli -g</code>命令在我电脑上是需要<code>sudo</code>来提权的。</li>
+<li>首先在工作新建一个目录<code>mkdir -v hexo</code>,然后在目录<code>hexo</code>内进行<code>hexo init blog</code>命令，这个命令会在<code>hexo</code>目录下新建<code>blog</code>目录。</li>
+<li><code>hexo init blog</code>命令在我电脑上失败了，但是<code>cd</code>进<code>blog</code>目录后执行<code>npm install</code>命令就可以解决问题。</li>
+<li>执行<code>hexo server</code>就能在本地4000端口访问了，如果端口冲突，可以使用<code>-p &lt;port-number&gt;</code>来解决。<br>当然还是有一些高阶的安装方法，但是本着<code>tldr</code>的原则，我选择忽略。</li>
+</ul>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p>可能是我能力不行吧，我觉得官网的文档写得非常非常非常糟糕。下面讲讲我对hexo的认识吧：</p>
+<p>1.首先，讲讲<code>hexo server</code>or<code>hexo s</code>命令吧，这是一个在本地开启服务的命令，相信在<a href="#%E5%AE%89%E8%A3%85">安装</a>部分读者已经尝试过这个命令了。该命令是不生成任何输出文件的。</p>
+<p>2.其次，如果我们想要将我们的博客系统部署到github上，应该怎么做呢？答案是使用<code>hexo generate</code>or<code>hexo g</code>命令，它的作用是生成能够直接解析的html文件。<br>该命令成功运行后将在<code>hexo\blog</code>目录下生成一个<code>public</code>文件夹，我们只需要将这个文件夹的内容部署到github上就可以在外网访问了，部署详细见<a href="#%E9%83%A8%E7%BD%B2%E5%88%B0github">部署到github</a>。</p>
+<p>3.那么，<code>blog</code>目录下还有什么呢？我认为最重要的就是<code>source</code> &amp; <code>themes</code> &amp; <code>_config.yml</code>了。</p>
+<p>4.其中<code>source</code>就是我们的markdown格式的文章所存储的地方，也就是源文件（源码）的一部分了。通常我们不需要手动在<code>source</code>目录下添加文件，<code>hexo new post</code>命令就可以在<code>source\_post</code>目录下添加我们的文章了。那么<code>_post</code>存储的是我们博客能被看到的部分，而<code>source</code>目录下像<code>_drafts</code>内的文章是不可见的，类似草稿。现在我们不需要弄清出这么多，详细可见<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/setup">官方文档</a>。</p>
+<p>5.<code>themes</code>存放的使我们博客主题的源码内容。在没有安装自定义主题时，该目录下只有一个空的<code>.gitkeep</code>文件（我的是这样）。关于主题的详细内容见<a href="#%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85">主题安装</a></p>
+<p>6.<code>_config.yml</code>是最重要的配置文件了！但是我们在这里不说，因为<code>tldr</code>!有关内容可以见<a href="#%E9%83%A8%E7%BD%B2%E5%88%B0github">部署到github</a>和<a href="#%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85">主题安装</a></p>
+<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2><p>笔者在部署到github上算是遇到不少坑。读者们千万小心！</p>
+<p>详细步骤我就不说了<code>RTFM&amp;STFW</code>，见官网<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/one-command-deployment">一键部署</a>,但是有几点要注意：</p>
+<ul>
+<li>首先，去github新建一个仓库。<em><strong>是的这一步很重要</strong></em>,其中最重要的就是仓库的名称了，一定一定要是<code>&lt;usr-name&gt;.github.io</code>!否则将来的网址会非常复杂，且有各种各样奇怪的问题。</li>
+<li>其次在<code>_config.yam</code>中的相关配置务必如下：</li>
+</ul>
+<pre><code>deploy:
+  type: &#39;git&#39;
+  repo: git@github.com:&lt;usr-name&gt;/&lt;usr-name&gt;.github.io.git 
+  branch: master
+
+url: https://&lt;usr-name&gt;.github.io/
+</code></pre>
+<ul>
+<li>确保能使用git登录github!我使用的ssh秘钥，如果和我一样则可以使用<code>ssh -T git@github.com</code>来检查git是否能登录github。</li>
+</ul>
+<h2 id="主题安装"><a href="#主题安装" class="headerlink" title="主题安装"></a>主题安装</h2><p>不同的主题有不同的配置方法，所以我建议选择中文的主题，这样可以快速上手配置。</p>
+<p>我使用的是<code>white</code>主题，其源码地址如下：<a target="_blank" rel="noopener" href="https://github.com/FuShaoLei/hexo-theme-white">white</a>，模板地址：<a target="_blank" rel="noopener" href="https://fushaolei.github.io/hexo-theme-white/">white</a>，主题文档：<a target="_blank" rel="noopener" href="https://fushaolei.github.io/hexo-theme-white/doc-white-configration/">主题文档</a>。</p>
+<p>这个主题在<code>_config.yml</code>中的配置也是最简单的，只需要添加<code>theme: white</code>即可！上手是非常快的！</p>
+
+        <!-- 分类文章 -->
+        
+          <div class="post-categoris-bottom">
+            <div class="post-categoris-name">Other</div>
+            <ul>
+            
+            
+              
+                <li class="me base">
+                  <a  href="/2023/06/12/Hexo/" class="post-categoris-bottom-link">
+                  Hexo快速入门
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            </ul>
+
+          </div>
+
+        
+      </div>
+      <div class="post-content-inner-space">
+        
+          <div class="space-toc-main animate__animated  animate__fadeInUp">
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E6%A6%82%E8%A6%81"><span class="space-toc-text">概要</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E4%BE%9D%E8%B5%96"><span class="space-toc-text">依赖</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E5%AE%89%E8%A3%85"><span class="space-toc-text">安装</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="space-toc-text">目录结构</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0github"><span class="space-toc-text">部署到github</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85"><span class="space-toc-text">主题安装</span></a></li></ol>
+           </div>
+        
+      </div>
+   </div>
+    <!-- 评论 -->
+    
+  </div>
+</article>
+  </div>
+</div>
+
+
+
+<!-- 如果是home模式的话，不在首页就显示footer，如果不是home模式的话 所有都显示footer -->
+
+  <div class="footer-outer animate__animated  animate__fadeInUp">
+    <div class="footer-inner">
+    <div class="footer-text">
+    <p>Power by <a target="_blank" rel="noopener" href="http://hexo.io/">Hexo</a> Theme by <a target="_blank" rel="noopener" href="https://github.com/FuShaoLei/hexo-theme-white">White</a></p>
+
+    </div>
+    <div class="footer-contact">
+    <ul class="footer-ul">
+        
+        <li class="footer-li">
+            <a href="https://github.com/ZZP-DMU" target="_blank">
+                <i class="ri-github-line"></i>
+            </a>
+        </li>
+        
+        <li class="footer-li">
+            <a href="mailto:3571669089@qq.com" target="_blank">
+                <i class="ri-mail-line"></i>
+            </a>
+        </li>
+        
+    </ul>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+<script src="/js/white.js"></script>
+
+
+
+    
+      
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+</body>
+</html>
