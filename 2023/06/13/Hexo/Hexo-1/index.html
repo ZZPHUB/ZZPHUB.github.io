@@ -176,6 +176,16 @@ marked:
 </li>
 </ul>
 <p>配置这个文件的作用就是在首页的菜单栏目增加我们刚才生成的slide页面，在<code>source/slide/index.md</code>中，我们可以创建链接指向<code>lib</code>目录下的自定义html文件</p>
+<h2 id="Hexo中实现对latex的支持"><a href="#Hexo中实现对latex的支持" class="headerlink" title="Hexo中实现对latex的支持"></a>Hexo中实现对latex的支持</h2><p>很简单，我们只需要执行以下命令：</p>
+<ul>
+<li><code>cd blog</code></li>
+<li><code>npm install hexo-math</code></li>
+<li>在需要插入公式的地方用以下格式</li>
+</ul>
+<pre><code>&#123;% mathjax  %&#125;
+#your math equation in latex format
+&#123;% endmathjax %&#125;
+</code></pre>
 
         <!-- 分类文章 -->
         
