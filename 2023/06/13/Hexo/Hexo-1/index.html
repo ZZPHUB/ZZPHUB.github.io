@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>  Linux for Stratch |    ZZP</title>
+  <title>  Hexo进阶配置 |    ZZP</title>
   <meta name="description" content="My Blog Records What I Learn.">
   <!-- 标签页图标 -->
   
@@ -127,7 +127,7 @@
 <article class="post-inner">
   <div class="post-content-outer">
     <div class="post-intro">
-      <div class="post-title animate__animated  animate__fadeInUp">Linux For Stratch</div>
+      <div class="post-title animate__animated  animate__fadeInUp">Hexo进阶配置</div>
       <div class="meta-intro animate__animated  animate__fadeInUp">6月 13 2023</div>
       
     </div>
@@ -138,22 +138,27 @@
       <div class="post-content-main animate__animated  animate__fadeInUp">
         <!-- top型目录 -->
         
-        <h1 id="这里现在还是什么都没有"><a href="#这里现在还是什么都没有" class="headerlink" title="这里现在还是什么都没有"></a>这里现在还是什么都没有</h1>
+        <h1 id="Hexo进阶配置"><a href="#Hexo进阶配置" class="headerlink" title="Hexo进阶配置"></a>Hexo<del>进阶</del>配置</h1><h2 id="markdown图片"><a href="#markdown图片" class="headerlink" title="markdown图片"></a>markdown图片</h2><p><code>_config.yam</code>配置如下：</p>
+<pre><code>post_asset_folder: true
+marked:
+    prepenRoot: true
+    postAsset: true
+</code></pre>
+<p>进行以上配置之后，每次我们使用<code>hexo new post &lt;article&gt;</code>创建新文章时，都会同时在<code>source</code>目录下创建同名的目录，用以储存该文章所要用到的图片资源。部署到github上是亲测好用的。</p>
+<h2 id="内网穿透，告别github"><a href="#内网穿透，告别github" class="headerlink" title="内网穿透，告别github"></a>内网穿透，告别github</h2><p>如果我们本地有内网穿透的话，只要内网穿透的类型为HTTPS，且端口号为<code>&lt;port-number&gt;</code>,那么我们就可以使用<code>hexo s -p &lt;port-number&gt;</code>,这样我们使用内网穿透的域名就能访问我们的博客系统了！</p>
+<p>虽然我们告别了github，但是我们又陷入了内网穿透限制带宽的深渊了，如何选择就要看读者的口袋了。</p>
+
         <!-- 分类文章 -->
         
           <div class="post-categoris-bottom">
-            <div class="post-categoris-name">Linux</div>
+            <div class="post-categoris-name">Hexo</div>
             <ul>
             
             
               
-            
-            
-            
-              
-                <li class="me base">
-                  <a  href="/2023/06/13/LFS/" class="post-categoris-bottom-link">
-                  Linux For Stratch
+                <li class="base">
+                  <a  href="/2023/06/12/Hexo/Hexo-0/" class="post-categoris-bottom-link">
+                  Hexo快速入门
                 </a>
                 </li>
               
@@ -165,6 +170,21 @@
             
             
             
+              
+            
+            
+            
+              
+            
+            
+            
+              
+                <li class="me base">
+                  <a  href="/2023/06/13/Hexo/Hexo-1/" class="post-categoris-bottom-link">
+                  Hexo进阶配置
+                </a>
+                </li>
+              
               
             
             
