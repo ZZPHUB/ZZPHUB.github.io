@@ -147,6 +147,7 @@ marked:
 <p>进行以上配置之后，每次我们使用<code>hexo new post &lt;article&gt;</code>创建新文章时，都会同时在<code>source</code>目录下创建同名的目录，用以储存该文章所要用到的图片资源。部署到github上是亲测好用的。</p>
 <h2 id="内网穿透，告别github"><a href="#内网穿透，告别github" class="headerlink" title="内网穿透，告别github"></a>内网穿透，告别github</h2><p>如果我们本地有内网穿透的话，只要内网穿透的类型为HTTPS，且端口号为<code>&lt;port-number&gt;</code>,那么我们就可以使用<code>hexo s -p &lt;port-number&gt;</code>,这样我们使用内网穿透的域名就能访问我们的博客系统了！</p>
 <p>虽然我们告别了github，但是我们又陷入了内网穿透限制带宽的深渊了，如何选择就要看读者的口袋了。</p>
+<h2 id="posts目录的整理"><a href="#posts目录的整理" class="headerlink" title="_posts目录的整理"></a>_posts目录的整理</h2><p>如果未来我们的博客系统变得庞大起来，博文的管理肯定会成为一个难题，所以我们应该对<code>_posts</code>目录下的文件进行管理。官方文档中并没有给出相应的办法，但是经过试验，我们可以直接在<code>_posts</code>目录下新建文件夹，将相同category的文件放在同一个文件夹内，同时注意将同名资源文件夹也要放进来。新建的文件没有办法自动在我们定义的文件夹中生成，但我们可以手动移动，对系统没有影响。</p>
 
         <!-- 分类文章 -->
         
