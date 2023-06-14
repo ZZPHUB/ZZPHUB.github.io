@@ -180,11 +180,20 @@ marked:
 <ul>
 <li><code>cd blog</code></li>
 <li><code>npm install hexo-math</code></li>
-<li>在需要插入公式的地方用以下格式</li>
+<li><del>在需要插入公式的地方用以下格式</del></li>
 </ul>
 <pre><code>&#123;% mathjax  %&#125;
 #your math equation in latex format
 &#123;% endmathjax %&#125;
+</code></pre>
+<ul>
+<li>插入行内公式可以用上面的mathjax，而如果想要插入多行公式就需要使用以下格式：</li>
+</ul>
+<pre><code>&#123;% katex %&#125;
+#your math equation in latex format \\
+#you can type here \\
+#here too
+&#123;% endkatex %&#125;
 </code></pre>
 
         <!-- 分类文章 -->
