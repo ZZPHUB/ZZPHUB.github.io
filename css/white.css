@@ -369,7 +369,7 @@ a {
   text-align: center;
   font-size: 2.15em;
   margin-bottom: 20px;
-  font-family: Gothic;
+  font-family: hack-regular;
 }
 .post-cover {
   margin-top: 80px;
@@ -399,7 +399,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   text-align: center;
-  font-family: Gothic;
+  font-family: hack-regular;
   color: #black;
   line-height: 4;
   position: relative;
@@ -433,7 +433,7 @@ a {
   margin: 15px 0px;
   color: #black;
   font-weight: normal;
-  font-family: Gothic;
+  font-family: hack-regular;
 }
 .post-content-inner h2 {
   font-size: 1.65em;
@@ -529,7 +529,7 @@ ol {
   margin: 6px 0px;
 }
 .post-content-inner ul li::before {
-  content: "◆";
+  content: "●";
   font-size: 0.8em;
   font-family: Merriweather;
   color: #black;
@@ -700,7 +700,7 @@ li p {
 .post-content-inner .post-content-main {
   flex-basis: 800px;
   max-width: 800px;
-  font-family: Gothic;
+  font-family: hack-regular;
 }
 .post-content-inner .post-content-inner-space {
   flex-basis: 165px;
