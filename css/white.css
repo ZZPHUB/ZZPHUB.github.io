@@ -457,7 +457,7 @@ a {
   display: inline-block;
   color: #d0a080;
   margin-left: 0.5rem;
-  font-weight: 1000;
+  font-weight: 1000i;
 }
 .post-content-inner h3 {
   font-size: 1.25em;
@@ -800,7 +800,7 @@ li p {
   position: absolute;
   top: 0;
   left: 0;
-  content: "";
+  content: "what";
   background-color: #fff;
   z-index: 1;
   width: 100%;
