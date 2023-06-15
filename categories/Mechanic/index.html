@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>  White主题进阶配置 |    ZZP</title>
+  <title>  Mechanic |    ZZP</title>
   <meta name="description" content="My Blog Records What I Learn.">
   <!-- 标签页图标 -->
   
@@ -140,122 +140,33 @@
 <div class="body-outer">
   <div class="body-inner">
     
-<article class="post-inner">
-  <div class="post-content-outer">
-    <div class="post-intro">
-      <div class="post-title animate__animated  animate__fadeInUp">White主题进阶配置</div>
-      <div class="meta-intro animate__animated  animate__fadeInUp">6月 15 2023</div>
-      
-    </div>
-    <div class="post-content-inner">
-      <div class="post-content-inner-space">
 
-      </div>
-      <div class="post-content-main animate__animated  animate__fadeInUp">
-        <!-- top型目录 -->
+  <section class="archive-outer">
+    <section class="archive-inner">
         
-        <h1 id="其实不用写标题"><a href="#其实不用写标题" class="headerlink" title="其实不用写标题"></a><del>其实不用写标题</del></h1><h2 id="在首页添加图标"><a href="#在首页添加图标" class="headerlink" title="在首页添加图标"></a>在首页添加图标</h2><ul>
-<li>Step1<br>安装图标插件，这一点white主题的作者好像在文档中并未说明，使用<code>npm install remixicon --save</code>即可完成安装</li>
-<li>在主题目录下的<code>_configg.yml</code>文件中进行配置，详细如下：</li>
-</ul>
-<pre><code>contact:
-    ***
-    &lt;name-you-add&gt;:
-        - &lt;url-link-to-where-you-want&gt;
-        - &lt;https://remixicon.com 中的的图标，注意是ri-*-li&gt; 
-</code></pre>
-<p>现在你就完成了配置</p>
-<h2 id="white-x2F-source-x2F-css目录讲解"><a href="#white-x2F-source-x2F-css目录讲解" class="headerlink" title="white&#x2F;source&#x2F;css目录讲解"></a>white&#x2F;source&#x2F;css目录讲解</h2><ul>
-<li>post.styl</li>
-</ul>
-<p>这个文件中描述了markdown格式的文件解析后的样子，font family用于确认字体，字体在<code>css/_defined/common.styl</code>文件中讲到，我们可以选择其中的<br>字体，将其设置为markdown的正文部分、标题等等。同时我们还可以在这个文件中对markdown标题的形式进行更改，其中文中都有中文提示。当读者在其中看到<code>h1，h2,h3</code>有关的字眼时，读者所见到的就是对标题定义的地方。</p>
-<ul>
-<li>common.styl</li>
-</ul>
-<p>对字体和自定义颜色等的定义</p>
-<h2 id="修改主页菜单的颜色"><a href="#修改主页菜单的颜色" class="headerlink" title="修改主页菜单的颜色"></a>修改主页菜单的颜色</h2><p>主页菜单的颜色可以在主题目录下的<code>_config.yml</code>中配置，即<code>text-secondary: &quot;#&lt;color&gt;&quot;</code>进行定义，但是同时这也会改变其他地方的颜色，建议选个好看点的。</p>
-
-        <!-- 分类文章 -->
         
-          <div class="post-categoris-bottom">
-            <div class="post-categoris-name">Hexo</div>
-            <ul>
+        
+        
             
             
-              
-                <li class="base">
-                  <a  href="/2023/06/12/Hexo/Hexo-0/" class="post-categoris-bottom-link">
-                  Hexo快速入门
-                </a>
-                </li>
-              
-              
-            
-            
-            
-              
-            
-            
-            
-              
-            
-            
-            
-              
-            
-            
-            
-              
-                <li class="base">
-                  <a  href="/2023/06/13/Hexo/Hexo-1/" class="post-categoris-bottom-link">
-                  Hexo进阶配置
-                </a>
-                </li>
-              
-              
-            
-            
-            
-              
-            
-            
-            
-              
-            
-            
-            
-              
-                <li class="me base">
-                  <a  href="/2023/06/15/Hexo/Hexo-2/" class="post-categoris-bottom-link">
-                  White主题进阶配置
-                </a>
-                </li>
-              
-              
-            
-            
-            
-              
-            
-            
-            </ul>
-
+        <div class="archive-name animate__animated  animate__fadeInUp">2023</div>
+        
+          <a  href="/2023/06/15/Mechanic/Fluid/">
+          <div class="archive-post animate__animated  animate__fadeInUp">
+            <div class="archive-post-title">流体力学</div>
+            <div class="archive-post-date">06-15</div>
+            <!-- 6月 15 -->
           </div>
+          </a>
+        
+        
+    </section>
+</section>
 
-        
-      </div>
-      <div class="post-content-inner-space">
-        
-          <div class="space-toc-main animate__animated  animate__fadeInUp">
-            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E5%9C%A8%E9%A6%96%E9%A1%B5%E6%B7%BB%E5%8A%A0%E5%9B%BE%E6%A0%87"><span class="space-toc-text">在首页添加图标</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#white-x2F-source-x2F-css%E7%9B%AE%E5%BD%95%E8%AE%B2%E8%A7%A3"><span class="space-toc-text">white&#x2F;source&#x2F;css目录讲解</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A1%B5%E8%8F%9C%E5%8D%95%E7%9A%84%E9%A2%9C%E8%89%B2"><span class="space-toc-text">修改主页菜单的颜色</span></a></li></ol>
-           </div>
-        
-      </div>
-   </div>
-    <!-- 评论 -->
-    
-  </div>
-</article>
+
+
+
+
   </div>
 </div>
 
