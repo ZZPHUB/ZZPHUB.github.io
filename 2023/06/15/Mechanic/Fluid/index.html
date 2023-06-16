@@ -29,6 +29,15 @@
 
     
   
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+
+   <!-- The loading of KaTeX is deferred to speed up page rendering -->
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+
+   <!-- To automatically render math in text elements, include the auto-render extension: -->
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
@@ -36,7 +45,7 @@
 <!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
 
 
-<body>
+<body >
 
 <div class="menu-outer">
     <div class="menu-inner">
@@ -136,9 +145,8 @@
 
 
 </div>
-
 <div class="body-outer">
-  <div class="body-inner">
+  <div class="body-inner" >
     
 <article class="post-inner">
   <div class="post-content-outer">
@@ -154,16 +162,7 @@
       <div class="post-content-main animate__animated  animate__fadeInUp">
         <!-- top型目录 -->
         
-        <div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
-
-   <!-- The loading of KaTeX is deferred to speed up page rendering -->
-   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
-
-   <!-- To automatically render math in text elements, include the auto-render extension: -->
-   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-
-<h1 id="流体力学-符松"><a href="#流体力学-符松" class="headerlink" title="流体力学-符松"></a>流体力学-符松</h1><hr>
+        <h1 id="流体力学-符松"><a href="#流体力学-符松" class="headerlink" title="流体力学-符松"></a>流体力学-符松</h1><hr>
 <h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><hr>
 <h2 id="水静力学"><a href="#水静力学" class="headerlink" title="水静力学"></a>水静力学</h2><h3 id="流体微团所受压力"><a href="#流体微团所受压力" class="headerlink" title="流体微团所受压力"></a>流体微团所受压力</h3><ul>
 <li>压强对流体微团不产生net force，除非压强随空间变化，即压强的梯度不为零。有推导如下：<br>$$ dF_x&#x3D;Pdydz-(P+\frac{\partial P}{\partial x}dx)dydz $$<br>$$ dF_y&#x3D;Pdxdz-(P+\frac{\partial P}{\partial y}dy)dxdz $$<br>$$ dF_z&#x3D;Pdxdy-(P+\frac{\partial P}{\partial z}dz)dxdy $$<br>$$ d\vec{F}&#x3D;(-\frac{\partial P}{\partial x}-\frac{\partial P}{\partial y}-\frac{\partial P}{\partial z})dxdydz&#x3D;-\nabla Pdxdydz $$<br>$$ d\vec{f}&#x3D;\frac{d\vec{F}}{dxdydz}&#x3D;-\nabla P $$</li>
@@ -197,7 +196,7 @@
 <h3 id="浮力"><a href="#浮力" class="headerlink" title="浮力"></a>浮力</h3><p>原理：根据散度原理将曲面积分化成体积积分，即：$$F&#x3D;-\int_S \vec{n}PdS&#x3D;-\int_V \nabla PdV&#x3D;\int_V \rho g dV&#x3D;\rho gV$$</p>
 <hr>
 <h2 id="Unkown"><a href="#Unkown" class="headerlink" title="Unkown"></a>Unkown</h2><hr>
-</div>
+
         <!-- 分类文章 -->
         
           <div class="post-categoris-bottom">
