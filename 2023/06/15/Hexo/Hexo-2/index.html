@@ -194,6 +194,10 @@
 </ul>
 <p>对字体和自定义颜色等的定义</p>
 <h2 id="修改主页菜单的颜色"><a href="#修改主页菜单的颜色" class="headerlink" title="修改主页菜单的颜色"></a>修改主页菜单的颜色</h2><p>主页菜单的颜色可以在主题目录下的<code>_config.yml</code>中配置，即<code>text-secondary: &quot;#&lt;color&gt;&quot;</code>进行定义，但是同时这也会改变其他地方的颜色，建议选个好看点的。</p>
+<h2 id="white-x2F-layout目录讲解"><a href="#white-x2F-layout目录讲解" class="headerlink" title="white&#x2F;layout目录讲解"></a>white&#x2F;layout目录讲解</h2><p>我们对事物的认识总是曲折前进的，最近有搞清了hexo工作的具体细节了。<br>其实我们用markdown写的文章最后都会被hexo解析成html文件，那么主题就相当于模板html，hexo解析时只需要将我们写的内容放进模板中就可以了。无论它是如何解析markdown的，但是它最后一定是html，那么如果我们想要diy的话，就可以在模板文件中寻找一些蛛丝马迹。下面就是我的一些小小发现：</p>
+<ul>
+<li>partial目录<br>其中的<code>head.ejs</code>文件就是html文件的头部，其中引用的一些css和js文件。利用这个原理我们可以摆脱hexo中hexo-math插件，直接在markdown中使用<code>$$&lt;math equation&gt;$$</code>。至于我为什么要用这个方法还是因为我懒得更换hexo-renderer-marked渲染，所以必须使用<code>&#123;% katex/mathjax %&#125;</code>语法，他们在多行公式排版时让我感到头疼、恶心，所以这种用html编写katex公式的方法还是比较舒服的。</li>
+</ul>
 
         <!-- 分类文章 -->
         
@@ -271,7 +275,7 @@
       <div class="post-content-inner-space">
         
           <div class="space-toc-main animate__animated  animate__fadeInUp">
-            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E5%9C%A8%E9%A6%96%E9%A1%B5%E6%B7%BB%E5%8A%A0%E5%9B%BE%E6%A0%87"><span class="space-toc-text">在首页添加图标</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#white-x2F-source-x2F-css%E7%9B%AE%E5%BD%95%E8%AE%B2%E8%A7%A3"><span class="space-toc-text">white&#x2F;source&#x2F;css目录讲解</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A1%B5%E8%8F%9C%E5%8D%95%E7%9A%84%E9%A2%9C%E8%89%B2"><span class="space-toc-text">修改主页菜单的颜色</span></a></li></ol>
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E5%9C%A8%E9%A6%96%E9%A1%B5%E6%B7%BB%E5%8A%A0%E5%9B%BE%E6%A0%87"><span class="space-toc-text">在首页添加图标</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#white-x2F-source-x2F-css%E7%9B%AE%E5%BD%95%E8%AE%B2%E8%A7%A3"><span class="space-toc-text">white&#x2F;source&#x2F;css目录讲解</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A1%B5%E8%8F%9C%E5%8D%95%E7%9A%84%E9%A2%9C%E8%89%B2"><span class="space-toc-text">修改主页菜单的颜色</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#white-x2F-layout%E7%9B%AE%E5%BD%95%E8%AE%B2%E8%A7%A3"><span class="space-toc-text">white&#x2F;layout目录讲解</span></a></li></ol>
            </div>
         
       </div>
