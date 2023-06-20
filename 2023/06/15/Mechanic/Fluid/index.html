@@ -188,7 +188,7 @@
 <h3 id="平衡状态下的流体"><a href="#平衡状态下的流体" class="headerlink" title="平衡状态下的流体"></a>平衡状态下的流体</h3><ol>
 <li>fluid at rest.此时流体静止，没有加速度也没有切向摩擦力。压力和重力相等，有：$$\nabla P&#x3D;\rho \vec{g}$$</li>
 <li>Rigid-body motion.此时流体整体一起运动，但没有相对运动，切向摩擦力为零。有：$$\rho \vec{a}&#x3D;-\nabla P+\rho \vec{g}$$</li>
-<li>无旋&amp;不可压流动。无旋意味着旋度为零，不可压缩意味着散度为零，有:<br>$$ \because \quad \nabla \vec{v}&#x3D;0 \qquad \nabla \times \vec{v} &#x3D; 0 $$<br>$$ \because \quad \vec{v}\times (\nabla\times \vec{v})&#x3D;\vec{v} (\nabla \vec{v})-\nabla^2 \vec{v} $$<br>$$ \therefore \quad \vec{f}_{shear}&#x3D;\mu \nabla^2 \vec{v}&#x3D;0 $$<br>$$ \text then\quad \rho \vec{a}&#x3D;-\nabla P+\rho \vec{g} $$</li>
+<li>无旋&amp;不可压流动。无旋意味着旋度为零，不可压缩意味着散度为零，有:<br>$$ \because \quad \nabla \vec{v}&#x3D;0 \qquad \nabla \times \vec{v} &#x3D; 0 $$<br>$$ \because \quad \nabla \times \vec{v}\times \nabla&#x3D;(\nabla \vec{v})\nabla-\nabla^2 \vec{v} $$<br>$$ \therefore \quad \vec{f}_{shear}&#x3D;\mu \nabla^2 \vec{v}&#x3D;0 $$<br>$$ \text then\quad \rho \vec{a}&#x3D;-\nabla P+\rho \vec{g} $$</li>
 </ol>
 <h3 id="水静力压力分布"><a href="#水静力压力分布" class="headerlink" title="水静力压力分布"></a>水静力压力分布</h3><p>上面的分析采用的都是微分方法，在下面将会采用积分方法计算流体中的压力分布。</p>
 <p>由于符松老师上课只讲了在静止情况下的压力分布，所以这里我们也只是记录了静止情况的压力分布，非惯性系下的流体压力分布见工程流体力学。</p>
@@ -255,6 +255,10 @@
                 </a>
                 </li>
               
+              
+            
+            
+            
               
             
             

@@ -448,11 +448,11 @@ a {
   font-weight: 1000;
 }
 .post-content-inner h2 {
-  font-size: 1.55em;
+  font-size: 1.9em;
   margin: 30px 0px;
 }
 .post-content-inner h2::before {
-  content: "✸";
+  content: "";
   font-family: Merriweather;
   display: inline-block;
   color: #d0a080;
@@ -460,20 +460,20 @@ a {
   font-weight: 1000i;
 }
 .post-content-inner h3 {
-  font-size: 1.25em;
+  font-size: 1.6em;
   display: inline-block;
 /*box-shadow: inset 0 -1rem 0 #E3E3E3*/
 }
 .post-content-inner h3::before {
-  content: "✷";
+  content: "";
   font-family: Merriweather;
   display: inline-block;
   color: #d090a0;
   margin-left: 0.5rem;
   font-weight: 1000;
 }
-.post-content-inner h4 font-size 1.15em::before {
-  content: "✶";
+.post-content-inner h4 font-size 1.3em::before {
+  content: "";
   font-family: Merriweather;
   display: inline-block;
   color: #e0a090;
@@ -481,7 +481,7 @@ a {
   font-weight: 1000;
 }
 .post-content-inner h5 {
-  font-size: 1em;
+  font-size: 1.15em;
 }
 .post-content-inner h6 {
   font-size: 1em;
