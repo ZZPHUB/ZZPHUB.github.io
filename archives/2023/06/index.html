@@ -291,6 +291,29 @@
     <p>Power by <a target="_blank" rel="noopener" href="http://hexo.io/">Hexo</a> Theme by <a target="_blank" rel="noopener" href="https://github.com/FuShaoLei/hexo-theme-white">White</a>   因为它就在那里！</p>
 
     </div>
+    <div><p id="time"></p></div>
+    <script type="text/javascript">  
+        function showTime(){  
+            var date = new Date();  
+            var year = date.getFullYear(); //获取当前年份   
+            var month = date.getMonth()+1;//获取当前月份   
+            var day = date.getDate();//获取当前日   
+            var hours = date.getHours();//获取小时   
+            var minutes = date.getMinutes();//获取分钟   
+            var seconds = date.getSeconds();//获取秒   
+            if(day<10){
+                day="0"+day;
+            }
+            if(minutes<10){
+                minutes="0"+minutes;
+            }
+            if(seconds<10){
+                seconds="0"+seconds;
+            }
+            document.getElementById('time').innerHTML = year+'-'+month+'-'+day+' '+hours+':'+minutes+':'+seconds;  
+        }  
+        setInterval(showTime,950); //设置定时器，每间隔1秒钟调用一次showTime()方法   
+    </script> 
     <div class="footer-contact">
     <ul class="footer-ul">
         
