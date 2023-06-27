@@ -174,19 +174,131 @@
       <div class="post-content-main animate__animated  animate__fadeInUp">
         <!-- top型目录 -->
         
-        <h2 id="Latex中使用gnuplot绘图"><a href="#Latex中使用gnuplot绘图" class="headerlink" title="Latex中使用gnuplot绘图"></a>Latex中使用gnuplot绘图</h2><ol>
+        <h2 id="Latex中使用gnuplot绘图"><a href="#Latex中使用gnuplot绘图" class="headerlink" title="Latex中使用gnuplot绘图"></a>Latex中使用gnuplot绘图</h2><h3 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h3><ol>
 <li>添加xelatex编译参数<code>-shell-escape</code></li>
 <li>使用gnuplottex宏包，<code>\usepackage[miktex]&#123;gnuplottex&#125;</code></li>
-<li>使用过环境<code> </code></li>
+<li>使用过环境</li>
 </ol>
+<pre><code>\begin&#123;gnuplot&#125;[terminal=epslatex]
+*----gnuplot command----*
+\end&#123;gnuplot&#125;
+</code></pre>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h3><pre><code>\documentclass&#123;ctexart&#125;
+\usepackage[miktex]&#123;gnuplottex&#125;
+\begin&#123;document&#125;
+\begin&#123;gnuplot&#125;[terminal=epslatex]
+set pm3d  
+set isosamples 50,50 
+splot x**3+y**2 
+\end&#123;gnuplot&#125;
+\end&#123;document&#125;
+</code></pre>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="/2023/06/28/Math/Latex-1/gnuplot.png" >
+        </sapn>
+      </p>
 
         <!-- 分类文章 -->
+        
+          <div class="post-categoris-bottom">
+            <div class="post-categoris-name">Math</div>
+            <ul>
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2023/06/13/Math/Further-mathematics/" class="post-categoris-bottom-link">
+                  高数
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2023/06/14/Math/Integral-transform/" class="post-categoris-bottom-link">
+                  积分变换
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2023/06/17/Math/Latex-0/" class="post-categoris-bottom-link">
+                  Latex数学公式
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2023/06/19/Math/Vector_calculus/" class="post-categoris-bottom-link">
+                  向量分析
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+                <li class="me base">
+                  <a  href="/2023/06/28/Math/Latex-1/" class="post-categoris-bottom-link">
+                  Latex使用技巧
+                </a>
+                </li>
+              
+              
+            
+            
+            </ul>
+
+          </div>
+
         
       </div>
       <div class="post-content-inner-space">
         
           <div class="space-toc-main animate__animated  animate__fadeInUp">
-            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#Latex%E4%B8%AD%E4%BD%BF%E7%94%A8gnuplot%E7%BB%98%E5%9B%BE"><span class="space-toc-text">Latex中使用gnuplot绘图</span></a></li></ol>
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#Latex%E4%B8%AD%E4%BD%BF%E7%94%A8gnuplot%E7%BB%98%E5%9B%BE"><span class="space-toc-text">Latex中使用gnuplot绘图</span></a><ol class="space-toc-child"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#Introduce"><span class="space-toc-text">Introduce</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#Example"><span class="space-toc-text">Example:</span></a></li></ol></li></ol>
            </div>
         
       </div>
