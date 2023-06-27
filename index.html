@@ -157,11 +157,11 @@
 
 
 </div>
-<div class="body-outer">
-  <div class="body-inner" >
+<div class="body-outer" >
+  <div class="body-inner">
     
     <section class="intro-section">
-    <div class="intro-content">
+    <div class="intro-content" >
         <div class="intro-title animate__animated  animate__fadeInUp">Welcome.</div>
         <div class="intro-sub animate__animated  animate__fadeInUp"><p>My Blog Build By <a target="_blank" rel="noopener" href="http://hexo.io/">Hexo</a></p>
 </div>
@@ -194,8 +194,71 @@
 
 <!-- 如果是home模式的话，不在首页就显示footer，如果不是home模式的话 所有都显示footer -->
 
+    <style>
+    body
+    {
+      background-image: url(https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/08.jpg);
+    }
+  </style>
 
 
+
+
+<!-- <div class="footer-outer animate__animated  animate__fadeInUp">
+    <div class="footer-inner">
+    <div class="footer-text">
+    <p>Power by <a target="_blank" rel="noopener" href="http://hexo.io/">Hexo</a> Theme by <a target="_blank" rel="noopener" href="https://github.com/FuShaoLei/hexo-theme-white">White</a>   因为它就在那里！</p>
+
+    </div>
+    <div><p id="time"></p></div>
+    <script type="text/javascript">  
+        function showTime(){  
+            var date = new Date();  
+            var year = date.getFullYear(); //获取当前年份   
+            var month = date.getMonth()+1;//获取当前月份   
+            var day = date.getDate();//获取当前日   
+            var hours = date.getHours();//获取小时   
+            var minutes = date.getMinutes();//获取分钟   
+            var seconds = date.getSeconds();//获取秒   
+            if(day<10){
+                day="0"+day;
+            }
+            if(minutes<10){
+                minutes="0"+minutes;
+            }
+            if(seconds<10){
+                seconds="0"+seconds;
+            }
+            document.getElementById('time').innerHTML = year+'-'+month+'-'+day+' '+hours+':'+minutes+':'+seconds;  
+        }  
+        setInterval(showTime,950); //设置定时器，每间隔1秒钟调用一次showTime()方法   
+    </script> 
+    <div class="footer-contact">
+    <ul class="footer-ul">
+        
+        <li class="footer-li">
+            <a href="https://github.com/ZZP-DMU" target="_blank">
+                <i class="ri-github-line"></i>
+            </a>
+        </li>
+        
+        <li class="footer-li">
+            <a href="mailto:3571669089@qq.com" target="_blank">
+                <i class="ri-mail-line"></i>
+            </a>
+        </li>
+        
+        <li class="footer-li">
+            <a href="https://zzp-dmu.github.io" target="_blank">
+                <i class="ri-chat-heart-line"></i>
+            </a>
+        </li>
+        
+    </ul>
+    </div>
+    </div>
+</div>
+ -->
 
 
 <script src="/js/white.js"></script>
