@@ -74,7 +74,7 @@ span {
   float: left;
   margin-right: 30px;
   font-size: 0.9em;
-  color: #90A040;
+  color: #black;
   position: relative;
   transition: all 0.3s;
 }
@@ -105,12 +105,12 @@ span {
 #sort .categories-outer {
   display: none;
   z-index: 99999;
-  background: #fff;
+  background-color: rgba(255,255,255,0);
   border-radius: 3px;
   min-width: 100px;
   border: 1px solid #1A98FF;
   position: absolute;
-  left: -30px;
+  left: -1px;
   top: 30px;
 }
 #sort .categories-outer ul {
@@ -121,7 +121,7 @@ span {
   line-height: 2.8;
 }
 #sort .categories-outer ul li a {
-  color: #90A040;
+  color: #black;
 }
 #sort .categories-outer ul li a:hover {
   color: #black;
