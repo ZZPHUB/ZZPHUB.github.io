@@ -433,23 +433,24 @@ a {
 .post-content-inner h5,
 .post-content-inner h6 {
   margin: 15px 0px;
-  color: #black;
   font-weight: normal;
   font-family: hack-regular;
 }
 .post-content-inner h1 {
   font-size: 1.9em;
+  color: #black;
 }
 .post-content-inner h1::after {
   content: "(^ _ ^)";
   font-family: Merriweather;
   display: inline-block;
   color: #8090a0;
-  margin-left: 0.5rem;
   font-weight: 1000;
 }
 .post-content-inner h2 {
   font-size: 1.9em;
+  color: #black;
+  text-align: center;
   margin: 30px 0px;
 }
 .post-content-inner h2::before {
@@ -457,11 +458,11 @@ a {
   font-family: Merriweather;
   display: inline-block;
   color: #d0a080;
-  margin-left: 0.5rem;
   font-weight: 1000i;
 }
 .post-content-inner h3 {
-  font-size: 1.6em;
+  font-size: 1.7em;
+  color: #606060;
   display: inline-block;
 /*box-shadow: inset 0 -1rem 0 #E3E3E3*/
 }
@@ -469,23 +470,34 @@ a {
   content: "";
   font-family: Merriweather;
   display: inline-block;
-  color: #d090a0;
-  margin-left: 0.5rem;
+  color: #505050;
   font-weight: 1000;
 }
-.post-content-inner h4 font-size 1.3em::before {
-  content: "";
+.post-content-inner h4 {
+  font-size: 1.5em;
+  color: #858585;
+}
+.post-content-inner h4::before {
+  content: "•";
   font-family: Merriweather;
   display: inline-block;
-  color: #e0a090;
-  margin-left: 0.5rem;
+  color: #858585;
   font-weight: 1000;
 }
 .post-content-inner h5 {
-  font-size: 1.15em;
+  font-size: 1.3em;
+  color: #959595;
+}
+.post-content-inner h5::before {
+  content: "∘";
 }
 .post-content-inner h6 {
-  font-size: 1em;
+  font-size: 1.1em;
+  color: #a0a0a0;
+}
+.post-content-inner h6::before {
+  content: "▪";
+  color: #a0a0a0;
 }
 .post-content-inner blockquote {
   border-left: 4.2px solid #e3e3e3;
@@ -543,7 +555,7 @@ ol {
 .post-content-inner ol li::before {
   content: counter(li);
   font-family: Merriweather;
-  color: #black;
+  color: #90A040;
   margin-right: 0.7em;
   text-align: right;
 }
