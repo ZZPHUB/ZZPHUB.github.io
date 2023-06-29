@@ -174,7 +174,7 @@
       <div class="post-content-main animate__animated  animate__fadeInUp">
         <!-- top型目录 -->
         
-        <h1 id="Hexo进阶配置"><a href="#Hexo进阶配置" class="headerlink" title="Hexo进阶配置"></a>Hexo<del>进阶</del>配置</h1><h2 id="markdown图片"><a href="#markdown图片" class="headerlink" title="markdown图片"></a>markdown图片</h2><p><code>_config.yam</code>配置如下：</p>
+        <h2 id="markdown图片"><a href="#markdown图片" class="headerlink" title="markdown图片"></a>markdown图片</h2><p><code>_config.yam</code>配置如下：</p>
 <pre><code>post_asset_folder: true
 marked:
     prepenRoot: true
@@ -221,6 +221,37 @@ marked:
 <li>安装<code>npm install hexo-pdf --save</code></li>
 <li>使用<code>&#123;% pdf your-pdf-path %&#125;</code></li>
 </ul>
+<h2 id="HEXO中的mermaid插件-x2F-Hexo画图"><a href="#HEXO中的mermaid插件-x2F-Hexo画图" class="headerlink" title="HEXO中的mermaid插件&#x2F;Hexo画图"></a>HEXO中的mermaid插件&#x2F;Hexo画图</h2><p>一般markdown中是可以画图的，使用以下格式即可</p>
+<pre><code>graph LR;
+A --&gt; B
+</code></pre>
+<p>就有</p>
+<pre class="mermaid">graph LR;
+A --> B</pre>
+<p>但是在hexo中需要插件支持,所以配置如下</p>
+<ul>
+<li>安装插件，<code> npm install hexo-filter-mermaid-diagrams --save</code></li>
+<li>使能插件，需要在你当前使用的主题下的_config.yml中添加以下内容</li>
+</ul>
+<pre><code># mermaid chart
+mermaid: ## mermaid url https://github.com/knsv/mermaid
+  enable: true  # default true
+  version: &quot;7.1.2&quot; # default v7.1.2
+  options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
+    #startOnload: true  // default true
+</code></pre>
+<ul>
+<li>并在你当前主题中的after_footer.ejs文件中添加以下内容</li>
+</ul>
+<pre><code>&lt;% if (theme.mermaid.enable) &#123; %&gt;
+  &lt;script src=&#39;https://unpkg.com/mermaid@&lt;%= theme.mermaid.version %&gt;/dist/mermaid.min.js&#39;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    if (window.mermaid) &#123;
+      mermaid.initialize(&#123;theme: &#39;forest&#39;&#125;);
+    &#125;
+  &lt;/script&gt;
+&lt;% &#125; %&gt;
+</code></pre>
 
         <!-- 分类文章 -->
         
@@ -310,7 +341,7 @@ marked:
       <div class="post-content-inner-space">
         
           <div class="space-toc-main animate__animated  animate__fadeInUp">
-            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#markdown%E5%9B%BE%E7%89%87"><span class="space-toc-text">markdown图片</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%EF%BC%8C%E5%91%8A%E5%88%ABgithub"><span class="space-toc-text">内网穿透，告别github</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#posts%E7%9B%AE%E5%BD%95%E7%9A%84%E6%95%B4%E7%90%86"><span class="space-toc-text">_posts目录的整理</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#Hexo%E4%B8%AD%E8%87%AA%E5%AE%9A%E4%B9%89HTML"><span class="space-toc-text">Hexo中自定义HTML</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#Hexo%E4%B8%AD%E5%AE%9E%E7%8E%B0%E5%AF%B9latex%E7%9A%84%E6%94%AF%E6%8C%81"><span class="space-toc-text">Hexo中实现对latex的支持</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#Hexo%E6%8F%92%E5%85%A5pdf"><span class="space-toc-text">Hexo插入pdf</span></a></li></ol>
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#markdown%E5%9B%BE%E7%89%87"><span class="space-toc-text">markdown图片</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%EF%BC%8C%E5%91%8A%E5%88%ABgithub"><span class="space-toc-text">内网穿透，告别github</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#posts%E7%9B%AE%E5%BD%95%E7%9A%84%E6%95%B4%E7%90%86"><span class="space-toc-text">_posts目录的整理</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#Hexo%E4%B8%AD%E8%87%AA%E5%AE%9A%E4%B9%89HTML"><span class="space-toc-text">Hexo中自定义HTML</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#Hexo%E4%B8%AD%E5%AE%9E%E7%8E%B0%E5%AF%B9latex%E7%9A%84%E6%94%AF%E6%8C%81"><span class="space-toc-text">Hexo中实现对latex的支持</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#Hexo%E6%8F%92%E5%85%A5pdf"><span class="space-toc-text">Hexo插入pdf</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#HEXO%E4%B8%AD%E7%9A%84mermaid%E6%8F%92%E4%BB%B6-x2F-Hexo%E7%94%BB%E5%9B%BE"><span class="space-toc-text">HEXO中的mermaid插件&#x2F;Hexo画图</span></a></li></ol>
            </div>
         
       </div>
@@ -458,6 +489,15 @@ marked:
 
       <script>hljs.initHighlightingOnLoad();</script>
     
+
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
 
 </body>
 </html>
