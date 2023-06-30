@@ -479,6 +479,7 @@ a {
 }
 .post-content-inner h4::before {
   content: "•";
+  margin-right: 0.5em;
   font-family: Merriweather;
   display: inline-block;
   color: #858585;
@@ -490,6 +491,7 @@ a {
 }
 .post-content-inner h5::before {
   content: "∘";
+  margin-right: 0.3em;
 }
 .post-content-inner h6 {
   font-size: 1.1em;
@@ -498,6 +500,7 @@ a {
 .post-content-inner h6::before {
   content: "▪";
   color: #a0a0a0;
+  margin-right: 0.2em;
 }
 .post-content-inner blockquote {
   border-left: 4.2px solid #e3e3e3;

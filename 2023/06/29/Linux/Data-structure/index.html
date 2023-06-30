@@ -205,9 +205,9 @@ A[节点0] --> B[节点1]
 B[节点1] --> C[节点2] 
 C[节点2] --> D[NIL]</pre>
 <p>我们不难发现，节点在某种意义上就是一个链表，换一种说法就是节点是链表的外在具体表现。当我们确定一个节点时，我们就得到了一个元素和子链表，也就确定了一个链表。</p>
-<pre><code>data list&lt;A&gt;&#123;
-    key
-    list&lt;A&gt; next
+<pre><code>struct list&#123;
+    int key;
+    struct list *next;
 &#125;
 </code></pre>
 <h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><h4 id="分解"><a href="#分解" class="headerlink" title="分解"></a>分解</h4><ol>
@@ -221,13 +221,32 @@ tail(x:xs) = xs
 \right.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="mspace newline"></span><span class="base"><span class="strut" style="height:2.40003em;vertical-align:-0.95003em;"></span><span class="mspace" style="margin-right:2em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">{</span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">h</span><span class="mord mathnormal">e</span><span class="mord mathnormal">a</span><span class="mord mathnormal">d</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">x</span><span class="mord mathnormal">s</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">x</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="mord mathnormal">a</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">x</span><span class="mord mathnormal">s</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">x</span><span class="mord mathnormal">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
 <li>cons构造即有一个元素x和一个链表xs就可以构造出一个新链表x:xs,有$$ cons(x,xs)&#x3D;X $$</li>
 </ol>
+<pre><code class="c">int head(struct list X)
+&#123;
+    return X.key;
+&#125;
+struct list * tail(struct list X)
+&#123;
+    if X.next != NULL   return X.next;
+    else return NULL;
+&#125;
+struct list * cons(int x,struct list *xs)
+&#123;
+    struct list x_xs;
+    x_xs.key=x;
+    x_xs.next=xs;
+    return &amp;x_xs;
+&#125;
+</code></pre>
 <h4 id="获取长度"><a href="#获取长度" class="headerlink" title="获取长度"></a>获取长度</h4><p>根据定义，空链表长度为0，非空链表的长度为除去第一个元素的子链表长度加一，即$$ length(x:xs)&#x3D;length(xs)+1 $$<br>因为遍历计算链表长度，所以其时间复杂度是O(1)。</p>
-<pre><code>function length(X)
-    n=0
-    while X!=NIL do
-        n=n+1
-        X=tail(X)
-    return n
+<pre><code class="c">int length(struct list X)
+    int n=0;
+    while X.next != NULL
+    &#123; 
+        n=n+1;
+        X=tail(X);
+    &#125;
+    return n+1;
 </code></pre>
 <h4 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h4><p>在没有处理空链表的情况下，有<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace linebreak="newline"></mspace><mspace width="2em"/><mi>g</mi><mi>e</mi><mi>t</mi><mi>A</mi><mi>t</mi><mspace width="1em"/><mi>i</mi><mo stretchy="false">(</mo><mi>x</mi><mo>:</mo><mi>x</mi><mi>s</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.15999999999999992em" columnalign="left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>i</mi><mo>=</mo><mn>0</mn><mo>:</mo><mspace width="1em"/><mi>x</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>i</mi><mo mathvariant="normal">≠</mo><mn>0</mn><mo>:</mo><mi>g</mi><mi>e</mi><mi>t</mi><mi>A</mi><mi>t</mi><mspace width="1em"/><mo stretchy="false">(</mo><mi>i</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mi>x</mi><mi>s</mi></mrow></mstyle></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">\\ 
 \qquad getAt \quad i(x:xs)=\left\{
@@ -236,10 +255,12 @@ i=0:\quad x \\
 i \ne 0: getAt \quad(i-1)xs
 \end{array}
 \right.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mspace" style="margin-right:2em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mord mathnormal">A</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:1em;"></span><span class="mord mathnormal">i</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">x</span><span class="mord mathnormal">s</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.40003em;vertical-align:-0.95003em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">{</span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">x</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mord mathnormal">A</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:1em;"></span><span class="mopen">(</span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mord mathnormal">x</span><span class="mord mathnormal">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><br>由于需要进行i步，所以其时间复杂度为O(i)</p>
-<pre><code>function get-at(i,X)
-    while i!=0 do
-        X = tail(X)
-        i = i-1
+<pre><code class="c">int get-at(int i,struct list X)
+    while(i!=1)
+    &#123;
+     X = *(tail(X));
+     i = i-1;
+    &#125;
     return head(X)
 </code></pre>
 <h4 id="末尾元素"><a href="#末尾元素" class="headerlink" title="末尾元素"></a>末尾元素</h4><p>与head&#x2F;tail操作相反，有last&#x2F;init操作如下<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace linebreak="newline"></mspace><mspace width="2em"/><mrow><mo fence="true">{</mo><mtable rowspacing="0.15999999999999992em" columnalign="left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>l</mi><mi>a</mi><mi>s</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>i</mi><mi>n</mi><mi>i</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>N</mi><mi>I</mi><mi>L</mi></mrow></mstyle></mtd></mtr></mtable></mrow><mspace width="2em"/><mrow><mo fence="true">{</mo><mtable rowspacing="0.15999999999999992em" columnalign="left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>l</mi><mi>a</mi><mi>s</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo>:</mo><mi>x</mi><mi>s</mi><mo stretchy="false">)</mo><mo>=</mo><mi>l</mi><mi>a</mi><mi>s</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mi>s</mi><mo stretchy="false">)</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>i</mi><mi>n</mi><mi>i</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo>:</mo><mi>x</mi><mi>s</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi><mo>:</mo><mi>i</mi><mi>n</mi><mi>i</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mi>s</mi><mo stretchy="false">)</mo></mrow></mstyle></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">\\ 
@@ -256,18 +277,22 @@ last(x:xs) = last(xs) \\
 init(x:xs) = x:init(xs)
 \end{array}
 \right.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="mspace newline"></span><span class="base"><span class="strut" style="height:2.40003em;vertical-align:-0.95003em;"></span><span class="mspace" style="margin-right:2em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">{</span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">a</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">x</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">i</span><span class="mord mathnormal">n</span><span class="mord mathnormal">i</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:2em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">{</span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">a</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">x</span><span class="mord mathnormal">s</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">a</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mord mathnormal">s</span><span class="mclose">)</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">i</span><span class="mord mathnormal">n</span><span class="mord mathnormal">i</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">x</span><span class="mord mathnormal">s</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">i</span><span class="mord mathnormal">n</span><span class="mord mathnormal">i</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mord mathnormal">s</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
-<pre><code>function last(X)
-    x=NIL
-    while X != NIL do
-        x = head(X)
-        X = tail(X)
+<pre><code class="c">int last(struct list X)
+    int x=0;
+    while (X.next != NULL)
+    &#123;
+        X = *(tail(X));
+        x = head(X);
+    &#125;
     return x
 
-function init(X)
-     _X=NIL
-     while tail(X) != NIL do
-        _X=cons(head(X),_X)
+struct list *init(struct list X)
+    struct list _X;
+     while (tail(X) != NULL)
+     &#123;
+        _X=cons(head(X),&amp;_X)
         X = tail(X)
+     &#125;
     return reverse(_X) #_X是逆序的，需要倒转
 </code></pre>
 <h4 id="反向索引"><a href="#反向索引" class="headerlink" title="反向索引"></a>反向索引</h4><p>一般形式是获取链表中倒数第i个元素，last是反向索引的一种特例。</p>
@@ -285,7 +310,29 @@ function init(X)
         p = tail(p)
     return head(p)  
 </code></pre>
-<h4 id="更改"><a href="#更改" class="headerlink" title="更改"></a>更改</h4>
+<h4 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h4><p>添加称作append，<a href="#%E5%88%86%E8%A7%A3">和cons操作对称</a>，cons在表头增加，append在末尾增加。由于要遍历链表，所以其时间复杂度为O(n)。有以下规律$$ append(NIL,x)&#x3D;x:NIL$$ $$append(y:ys,x)&#x3D;y:(append(ys,x))$$</p>
+<pre><code class="c">struct list *append(struct list *X,int x)
+&#123;
+    struct list _X;
+    _X.key = x;
+    _X.next = NULL;
+    if X-&gt;next == NULL
+    &#123;
+        X-&gt;next = &amp;(_X);
+        return X;
+    &#125;   
+    struct list *H;
+    H = X;
+    while(X-&gt;next != NULL)
+    &#123;
+        X = tail(*X);
+    &#125;
+    X-&gt;next=&amp;(_X);
+    X = H;
+    return X;
+&#125;
+</code></pre>
+
         <!-- 分类文章 -->
         
           <div class="post-categoris-bottom">
