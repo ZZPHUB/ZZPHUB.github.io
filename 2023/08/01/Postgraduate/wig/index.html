@@ -1,0 +1,563 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>  WIG |    ZZP</title>
+  <meta name="description" content="My Blog Records What I Learn.">
+  <!-- 标签页图标 -->
+  
+
+  <!-- 图标库 -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- 动画库 -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/css/animate.css"/>
+  
+  <!-- css文件 -->
+  
+<link rel="stylesheet" href="/css/white.css">
+
+  <!-- 代码高亮 -->
+  
+    
+      
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.1.1/styles/github.css">
+
+    
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+
+   <!-- The loading of KaTeX is deferred to speed up page rendering -->
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+
+   <!-- To automatically render math in text elements, include the auto-render extension: -->
+   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body >
+
+<div class="menu-outer">
+    <div class="menu-inner">
+      <div class="menu-site-name  animate__animated  animate__fadeInUp">
+        <a href="/">
+          ZZP
+        </a>
+        
+      </div>
+      <div class="menu-group">
+        <ul class="menu-ul">
+        
+          <a href="/" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              HOME
+            </li>
+          </a>
+        
+          <a href="/archives" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              BLOG
+            </li>
+          </a>
+        
+          <a href="/resume" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              RESUME
+            </li>
+          </a>
+        
+          <a href="/slide" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              SLIDE
+            </li>
+          </a>
+        
+          <a href="/plan" class="nav-link">
+            <li class="menu-li  animate__animated  animate__fadeInUp">
+              PLAN
+            </li>
+          </a>
+        
+        
+          <li class="menu-li animate__animated  animate__fadeInUp" id="sort">
+             CATEGORIES
+             <div class="categories-outer " id="sort-div">
+               <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Math/">Math</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mechanic/">Mechanic</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Postgraduate/">Postgraduate</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Riscv/">Riscv</a></li></ul>
+             </div>
+          </li>
+        
+        
+          <li class="menu-li animate__animated  animate__fadeInUp" id="mobile-menu">
+            <i class="ri-menu-line"></i>
+          </li>
+        
+        </ul>
+
+      </div>
+
+    </div>
+</div>
+<div id="mobile-main" class="animate__animated  animate__fadeIn">
+  <div class="mobile-menu-inner">
+    <div class="mobile-menu-site-name animate__animated  animate__fadeInUp">
+      <a href="/">
+        ZZP
+      </a>
+    </div>
+    <div class="mobile-menu-group" id="mobile-close">
+      <i class="ri-close-line"></i>
+    </div>
+
+  </div>
+
+  <div class="mobile-menu-div">
+  
+    <a href="/" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>HOME</span>
+      </div>
+    </a>
+  
+    <a href="/archives" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>BLOG</span>
+      </div>
+    </a>
+  
+    <a href="/resume" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>RESUME</span>
+      </div>
+    </a>
+  
+    <a href="/slide" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>SLIDE</span>
+      </div>
+    </a>
+  
+    <a href="/plan" class="mobile-nav-link">
+      <div class="mobile-menu-child animate__animated  animate__fadeInUp">
+        <span>PLAN</span>
+      </div>
+    </a>
+  
+  
+  </div>
+
+
+</div>
+<div class="body-outer" >
+  <div class="body-inner">
+    
+<article class="post-inner">
+  <div class="post-content-outer">
+    <div class="post-intro">
+      <div class="post-title animate__animated  animate__fadeInUp">WIG</div>
+      <div class="meta-intro animate__animated  animate__fadeInUp">8月 01 2023</div>
+      
+    </div>
+    <div class="post-content-inner">
+      <div class="post-content-inner-space">
+
+      </div>
+      <div class="post-content-main animate__animated  animate__fadeInUp">
+        <!-- top型目录 -->
+        
+        <h2 id="高速船分类"><a href="#高速船分类" class="headerlink" title="高速船分类"></a>高速船分类</h2><ul>
+<li>水翼艇</li>
+<li>侧壁式气垫船</li>
+<li>全垫升气垫船</li>
+</ul>
+<h2 id="地效翼船的分类"><a href="#地效翼船的分类" class="headerlink" title="地效翼船的分类"></a>地效翼船的分类</h2><ul>
+<li>动力增升地效翼船</li>
+<li>动力气垫地效翼船</li>
+</ul>
+<h2 id="相关术语"><a href="#相关术语" class="headerlink" title="相关术语"></a>相关术语</h2><h3 id="1-襟翼-amp-副翼"><a href="#1-襟翼-amp-副翼" class="headerlink" title="1. 襟翼&amp;副翼"></a>1. 襟翼&amp;副翼</h3><h4 id="襟翼（Flap）"><a href="#襟翼（Flap）" class="headerlink" title="襟翼（Flap）"></a>襟翼（Flap）</h4><ul>
+<li>布局：前缘襟翼&amp;后缘襟翼</li>
+<li>作用：增加机翼面积与弯度，产生的翼缝能够避免湍流失速。起飞时增加升力，降落时增加阻力。</li>
+</ul>
+<h4 id="副翼（Aileron）"><a href="#副翼（Aileron）" class="headerlink" title="副翼（Aileron）"></a>副翼（Aileron）</h4><ul>
+<li>布局：内侧副翼&amp;外侧副翼</li>
+<li>作用：控制飞行器滚转运动，结合方向舵控制航向运动。</li>
+</ul>
+<h3 id="2-随边-amp-导边"><a href="#2-随边-amp-导边" class="headerlink" title="2. 随边&amp;导边"></a>2. 随边&amp;导边</h3><h4 id="随边（bow-edge）"><a href="#随边（bow-edge）" class="headerlink" title="随边（bow edge）"></a>随边（bow edge）</h4><ul>
+<li>机翼的前缘（猜测）</li>
+</ul>
+<h4 id="导边（stern-edge）"><a href="#导边（stern-edge）" class="headerlink" title="导边（stern edge）"></a>导边（stern edge）</h4><ul>
+<li>机翼的后缘（猜测）</li>
+</ul>
+<blockquote>
+<p>依据”Ground clearance gap at the bow and stern edge of the main wing,particularly the influence of flap position”原文此处和中文版对应，且特别强调flap襟翼这个概念，我个人认为应该就是机翼前缘和后缘的概念，bow有肩膀，艏部的意思，而stern则与之相反。机翼的术语中并未出现这个词语，但可能著书者属于船舶领域，使用了船舶领域的术语，给我造成了较大的困扰。</p>
+</blockquote>
+<h4 id="STILL-UNKNOWN"><a href="#STILL-UNKNOWN" class="headerlink" title="STILL UNKNOWN"></a>STILL UNKNOWN</h4><h3 id="3-扰流板（Spoiler）"><a href="#3-扰流板（Spoiler）" class="headerlink" title="3. 扰流板（Spoiler）"></a>3. 扰流板（Spoiler）</h3><ul>
+<li>作用：微调升力，降落时增加阻力降低空速。</li>
+</ul>
+<h3 id="4-翼尖小翼-amp-端板"><a href="#4-翼尖小翼-amp-端板" class="headerlink" title="4. 翼尖小翼&amp;端板"></a>4. 翼尖小翼&amp;端板</h3><h4 id="翼尖小翼（winglet）"><a href="#翼尖小翼（winglet）" class="headerlink" title="翼尖小翼（winglet）"></a>翼尖小翼（winglet）</h4><ul>
+<li>作用：削弱翼尖涡流的作用</li>
+</ul>
+<h4 id="端板（end-plate）"><a href="#端板（end-plate）" class="headerlink" title="端板（end plate）"></a>端板（end plate）</h4><ul>
+<li>作用：限制了翼尖的横流，同时也削弱了翼尖涡流（wingtip vortice）</li>
+</ul>
+<h3 id="5-寄生阻力-amp-诱导阻力"><a href="#5-寄生阻力-amp-诱导阻力" class="headerlink" title="5. 寄生阻力&amp;诱导阻力"></a>5. 寄生阻力&amp;诱导阻力</h3><h4 id="寄生阻力（Parasitic-Drag）"><a href="#寄生阻力（Parasitic-Drag）" class="headerlink" title="寄生阻力（Parasitic Drag）"></a>寄生阻力（Parasitic Drag）</h4><ul>
+<li>产生原因：由流体黏度和压强产生</li>
+<li>分类：形状阻力，摩擦阻力，干扰阻力</li>
+<li>别名：附加阻力,杂散阻力，废阻力</li>
+</ul>
+<h4 id="诱导阻力（Induced-Drag）"><a href="#诱导阻力（Induced-Drag）" class="headerlink" title="诱导阻力（Induced Drag）"></a>诱导阻力（Induced Drag）</h4><ul>
+<li>产生原因：伴随升力产生而产生，与翼尖涡流有关</li>
+<li>影响因素：升力越大，诱导阻力越大；展弦比越大，诱导阻力越小。</li>
+</ul>
+<h3 id="6-翼弦（Chord）"><a href="#6-翼弦（Chord）" class="headerlink" title="6. 翼弦（Chord）"></a>6. 翼弦（Chord）</h3><ul>
+<li>翼弦（Chord），为机翼前缘与后缘连成的直线，或称翼弦线、弦线（Chord Line）。而翼弦的长度，称为弦长（Chord  Length），在空气动力学中，常用c代表弦长。</li>
+</ul>
+<h3 id="7-上下反角-amp-攻角（仰角）-amp-俯仰角"><a href="#7-上下反角-amp-攻角（仰角）-amp-俯仰角" class="headerlink" title="7. 上下反角&amp;攻角（仰角）&amp;俯仰角"></a>7. 上下反角&amp;攻角（仰角）&amp;俯仰角</h3><h4 id="上下反角"><a href="#上下反角" class="headerlink" title="上下反角"></a>上下反角</h4><ul>
+<li>上反角的作用：增加横向稳定性，能使机翼自动回到水平位置</li>
+<li>上反角的缺陷：增加阻力，升力不垂直，并且降低横滚率（机动性变差）</li>
+<li>下反角用于提高机动性，降低横向稳定性</li>
+</ul>
+<h4 id="攻角（Attack-Angle）"><a href="#攻角（Attack-Angle）" class="headerlink" title="攻角（Attack Angle）"></a>攻角（Attack Angle）</h4><ul>
+<li>别名：迎角</li>
+<li>定义：机翼翼弦与自由流（相对风流）方向所成的夹角；飞机迎角则是机轴与自由流方向所成夹角。</li>
+<li>有效迎角：飞机迎角和翼剖面迎角可能不同，而翼剖面迎角为有效迎角，在翼尖有涡流存在（翼尖内侧空气由上往下），所以翼剖面迎角小于飞机迎角，导致实际阻力增加、升力减小</li>
+</ul>
+<h4 id="俯仰角"><a href="#俯仰角" class="headerlink" title="俯仰角"></a>俯仰角</h4><ul>
+<li>定义：机体轴和水平面的夹角，机头朝上为正</li>
+<li>和攻角的关系：俯仰角&#x3D;攻角+爬升角（爬升角为飞机速度方向和水平面的夹角）</li>
+</ul>
+<h3 id="8-气道"><a href="#8-气道" class="headerlink" title="8. 气道"></a>8. 气道</h3><ul>
+<li>个人觉得本文中的气道大部分指的是气垫的气道，也应该就是主翼下方形成气垫的空间</li>
+</ul>
+<h2 id="气动力学部分"><a href="#气动力学部分" class="headerlink" title="气动力学部分"></a>气动力学部分</h2><h3 id="1-补充知识点"><a href="#1-补充知识点" class="headerlink" title="1. 补充知识点"></a>1. 补充知识点</h3><h4 id="升力线理论"><a href="#升力线理论" class="headerlink" title="升力线理论"></a>升力线理论</h4><h3 id="2-机翼气动力性能"><a href="#2-机翼气动力性能" class="headerlink" title="2. 机翼气动力性能"></a>2. 机翼气动力性能</h3><h4 id="升力"><a href="#升力" class="headerlink" title="升力"></a>升力</h4><ul>
+<li>升力和升力系数随飞高减小而增大</li>
+<li>平均飞高大于0.4时地效可以忽略，平均飞高小于0.15时，升力和升力系数随展弦比增大而增大</li>
+</ul>
+<h4 id="阻力"><a href="#阻力" class="headerlink" title="阻力"></a>阻力</h4><ul>
+<li>展弦比大于1时，因诱导阻力减小，阻力和飞高成反比降低</li>
+<li>展弦比等于1时，飞高对阻力没有影响</li>
+<li>展弦比小于1时，阻力和飞高成反比增加</li>
+</ul>
+<blockquote>
+<p>此处无法理解成反比降低和成反比增加的意思，我猜测是展弦比大于1时，阻力随飞高成反比；展弦比小于1时，阻力随飞高成正比</p>
+</blockquote>
+<h4 id="升阻比"><a href="#升阻比" class="headerlink" title="升阻比"></a>升阻比</h4><h4 id="纵倾力矩"><a href="#纵倾力矩" class="headerlink" title="纵倾力矩"></a>纵倾力矩</h4><ul>
+<li>在地效区内，厚翼型剖面机翼能提供正向纵倾力钜，且飞高越低力矩越大</li>
+<li>在飞高和攻角一定时，升力中心向后移动</li>
+</ul>
+<blockquote>
+<p>正的纵向稳定性就是埋首力矩随者翘首纵倾角增大而增大，从而抑制翘首纵倾角的继续增大</p>
+</blockquote>
+<h3 id="3-地效翼船气动性能"><a href="#3-地效翼船气动性能" class="headerlink" title="3. 地效翼船气动性能"></a>3. 地效翼船气动性能</h3><h4 id="地效翼船气动布局的组成元素"><a href="#地效翼船气动布局的组成元素" class="headerlink" title="地效翼船气动布局的组成元素"></a>地效翼船气动布局的组成元素</h4><ul>
+<li>主翼</li>
+</ul>
+<blockquote>
+<ol>
+<li>需要特殊的翼型</li>
+<li>展弦比：展弦比大气动效率高但对于DACC、DACWIG而言难以形成有效的动力气垫。</li>
+<li>组合翼：利用了主翼翼尖涡流的能量且具有大展弦比从而提高气动效率；但低飞高、大纵倾角时，横向流动会影响组合翼的来流和气动效率并导致组合翼翼背气流过早脱离</li>
+</ol>
+</blockquote>
+<ul>
+<li>首推进器</li>
+</ul>
+<blockquote>
+<ol>
+<li>优点：提高静垫升能力（DACC&amp;DACWIG）、起飞性能、纵向力平衡和耐波性</li>
+<li>缺点：从首推进器进入气道的射流对纵向稳定性不利，需要安装大的尾翼和安定面</li>
+<li>优化首推进器系统的方向：导流叶片角、首推进器相对主翼的安装位置以及螺旋桨与导流叶片的相互影响</li>
+</ol>
+</blockquote>
+<ul>
+<li>主船体</li>
+</ul>
+<blockquote>
+<p>光滑；船体和随边的间隙减小，提高地效</p>
+</blockquote>
+<ul>
+<li>侧浮体</li>
+</ul>
+<blockquote>
+<p>侧浮体应尽量光滑、小，以减轻重量、阻力和成本；侧浮体基准面和随边的间隙减小，提高地效</p>
+</blockquote>
+<ul>
+<li>导流叶片（如果有）</li>
+<li>尾翼</li>
+</ul>
+<h4 id="地效翼船气动布局特征参数"><a href="#地效翼船气动布局特征参数" class="headerlink" title="地效翼船气动布局特征参数"></a>地效翼船气动布局特征参数</h4><ul>
+<li>几何参数，船的线型</li>
+<li>首推进器的转速</li>
+<li>首推进器的倾角</li>
+<li>导流叶片的角度</li>
+<li>襟翼的角度</li>
+<li>尾翼的角度</li>
+</ul>
+<h4 id="地效翼船的气动性能衡量参数"><a href="#地效翼船的气动性能衡量参数" class="headerlink" title="地效翼船的气动性能衡量参数"></a>地效翼船的气动性能衡量参数</h4><ul>
+<li>升力和升力系数。平均飞高越低，空速越快，升力和升力系数越大</li>
+<li>气动效率</li>
+<li>纵倾力矩，由此可以计算纵摇焦点的纵向位置</li>
+<li>静态垫升能力</li>
+<li>动态垫升能力，即首推进器转速一定时，升力与相对飞高的函数反应了地效翼船船重一定时的飞高</li>
+<li>气道的静推力恢复系数，反应了船舶在地面的操纵性</li>
+<li>气道的动推力恢复系数，反应了船舶的快速性</li>
+<li>船舶的动态气动中心，反应了船舶的纵向力平衡</li>
+</ul>
+<h2 id="水动力学部分"><a href="#水动力学部分" class="headerlink" title="水动力学部分"></a>水动力学部分</h2>
+        <!-- 分类文章 -->
+        
+          <div class="post-categoris-bottom">
+            <div class="post-categoris-name">Postgraduate</div>
+            <ul>
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+            
+            
+            
+              
+                <li class="base">
+                  <a  href="/2023/07/19/Postgraduate/read/" class="post-categoris-bottom-link">
+                  文献阅读方法
+                </a>
+                </li>
+              
+              
+            
+            
+            
+              
+            
+            
+            
+              
+                <li class="me base">
+                  <a  href="/2023/08/01/Postgraduate/wig/" class="post-categoris-bottom-link">
+                  WIG
+                </a>
+                </li>
+              
+              
+            
+            
+            </ul>
+
+          </div>
+
+        
+      </div>
+      <div class="post-content-inner-space">
+        
+          <div class="space-toc-main animate__animated  animate__fadeInUp">
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E9%AB%98%E9%80%9F%E8%88%B9%E5%88%86%E7%B1%BB"><span class="space-toc-text">高速船分类</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E5%9C%B0%E6%95%88%E7%BF%BC%E8%88%B9%E7%9A%84%E5%88%86%E7%B1%BB"><span class="space-toc-text">地效翼船的分类</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E7%9B%B8%E5%85%B3%E6%9C%AF%E8%AF%AD"><span class="space-toc-text">相关术语</span></a><ol class="space-toc-child"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#1-%E8%A5%9F%E7%BF%BC-amp-%E5%89%AF%E7%BF%BC"><span class="space-toc-text">1. 襟翼&amp;副翼</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#2-%E9%9A%8F%E8%BE%B9-amp-%E5%AF%BC%E8%BE%B9"><span class="space-toc-text">2. 随边&amp;导边</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#3-%E6%89%B0%E6%B5%81%E6%9D%BF%EF%BC%88Spoiler%EF%BC%89"><span class="space-toc-text">3. 扰流板（Spoiler）</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#4-%E7%BF%BC%E5%B0%96%E5%B0%8F%E7%BF%BC-amp-%E7%AB%AF%E6%9D%BF"><span class="space-toc-text">4. 翼尖小翼&amp;端板</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#5-%E5%AF%84%E7%94%9F%E9%98%BB%E5%8A%9B-amp-%E8%AF%B1%E5%AF%BC%E9%98%BB%E5%8A%9B"><span class="space-toc-text">5. 寄生阻力&amp;诱导阻力</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#6-%E7%BF%BC%E5%BC%A6%EF%BC%88Chord%EF%BC%89"><span class="space-toc-text">6. 翼弦（Chord）</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#7-%E4%B8%8A%E4%B8%8B%E5%8F%8D%E8%A7%92-amp-%E6%94%BB%E8%A7%92%EF%BC%88%E4%BB%B0%E8%A7%92%EF%BC%89-amp-%E4%BF%AF%E4%BB%B0%E8%A7%92"><span class="space-toc-text">7. 上下反角&amp;攻角（仰角）&amp;俯仰角</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#8-%E6%B0%94%E9%81%93"><span class="space-toc-text">8. 气道</span></a></li></ol></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E6%B0%94%E5%8A%A8%E5%8A%9B%E5%AD%A6%E9%83%A8%E5%88%86"><span class="space-toc-text">气动力学部分</span></a><ol class="space-toc-child"><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#1-%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="space-toc-text">1. 补充知识点</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#2-%E6%9C%BA%E7%BF%BC%E6%B0%94%E5%8A%A8%E5%8A%9B%E6%80%A7%E8%83%BD"><span class="space-toc-text">2. 机翼气动力性能</span></a></li><li class="space-toc-item space-toc-level-3"><a class="space-toc-link" href="#3-%E5%9C%B0%E6%95%88%E7%BF%BC%E8%88%B9%E6%B0%94%E5%8A%A8%E6%80%A7%E8%83%BD"><span class="space-toc-text">3. 地效翼船气动性能</span></a></li></ol></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E6%B0%B4%E5%8A%A8%E5%8A%9B%E5%AD%A6%E9%83%A8%E5%88%86"><span class="space-toc-text">水动力学部分</span></a></li></ol>
+           </div>
+        
+      </div>
+   </div>
+    <!-- 评论 -->
+    
+  </div>
+</article>
+  </div>
+</div>
+
+
+
+<!-- 如果是home模式的话，不在首页就显示footer，如果不是home模式的话 所有都显示footer -->
+
+  <div class="footer-outer animate__animated  animate__fadeInUp">
+    <div class="footer-inner">
+    <div class="footer-text">
+    <p>Power by <a target="_blank" rel="noopener" href="http://hexo.io/">Hexo</a> Theme by <a target="_blank" rel="noopener" href="https://github.com/FuShaoLei/hexo-theme-white">White</a>   因为它就在那里！</p>
+
+    </div>
+    <div><p id="time"></p></div>
+    <script type="text/javascript">  
+        function showTime(){  
+            var date = new Date();  
+            var year = date.getFullYear(); //获取当前年份   
+            var month = date.getMonth()+1;//获取当前月份   
+            var day = date.getDate();//获取当前日   
+            var hours = date.getHours();//获取小时   
+            var minutes = date.getMinutes();//获取分钟   
+            var seconds = date.getSeconds();//获取秒   
+            if(day<10){
+                day="0"+day;
+            }
+            if(hours<10){
+                hours="0"+hours;
+            }
+            if(minutes<10){
+                minutes="0"+minutes;
+            }
+            if(seconds<10){
+                seconds="0"+seconds;
+            }
+            document.getElementById('time').innerHTML = year+'-'+month+'-'+day+' '+hours+':'+minutes+':'+seconds;  
+        }  
+        setInterval(showTime,950); //设置定时器，每间隔1秒钟调用一次showTime()方法   
+    </script> 
+    <div class="footer-contact">
+    <ul class="footer-ul">
+        
+        <li class="footer-li">
+            <a href="https://github.com/ZZP-DMU" target="_blank">
+                <i class="ri-github-line"></i>
+            </a>
+        </li>
+        
+        <li class="footer-li">
+            <a href="mailto:3571669089@qq.com" target="_blank">
+                <i class="ri-mail-line"></i>
+            </a>
+        </li>
+        
+        <li class="footer-li">
+            <a href="https://zzp-dmu.github.io" target="_blank">
+                <i class="ri-chat-heart-line"></i>
+            </a>
+        </li>
+        
+    </ul>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- <div class="footer-outer animate__animated  animate__fadeInUp">
+    <div class="footer-inner">
+    <div class="footer-text">
+    <p>Power by <a target="_blank" rel="noopener" href="http://hexo.io/">Hexo</a> Theme by <a target="_blank" rel="noopener" href="https://github.com/FuShaoLei/hexo-theme-white">White</a>   因为它就在那里！</p>
+
+    </div>
+    <div><p id="time"></p></div>
+    <script type="text/javascript">  
+        function showTime(){  
+            var date = new Date();  
+            var year = date.getFullYear(); //获取当前年份   
+            var month = date.getMonth()+1;//获取当前月份   
+            var day = date.getDate();//获取当前日   
+            var hours = date.getHours();//获取小时   
+            var minutes = date.getMinutes();//获取分钟   
+            var seconds = date.getSeconds();//获取秒   
+            if(day<10){
+                day="0"+day;
+            }
+            if(hours<10){
+                hours="0"+hours;
+            }
+            if(minutes<10){
+                minutes="0"+minutes;
+            }
+            if(seconds<10){
+                seconds="0"+seconds;
+            }
+            document.getElementById('time').innerHTML = year+'-'+month+'-'+day+' '+hours+':'+minutes+':'+seconds;  
+        }  
+        setInterval(showTime,950); //设置定时器，每间隔1秒钟调用一次showTime()方法   
+    </script> 
+    <div class="footer-contact">
+    <ul class="footer-ul">
+        
+        <li class="footer-li">
+            <a href="https://github.com/ZZP-DMU" target="_blank">
+                <i class="ri-github-line"></i>
+            </a>
+        </li>
+        
+        <li class="footer-li">
+            <a href="mailto:3571669089@qq.com" target="_blank">
+                <i class="ri-mail-line"></i>
+            </a>
+        </li>
+        
+        <li class="footer-li">
+            <a href="https://zzp-dmu.github.io" target="_blank">
+                <i class="ri-chat-heart-line"></i>
+            </a>
+        </li>
+        
+    </ul>
+    </div>
+    </div>
+</div>
+ -->
+
+
+<script src="/js/white.js"></script>
+
+
+
+    
+      
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+</body>
+</html>
